@@ -6,7 +6,7 @@
     <title>Главная</title>
     <link rel="stylesheet" href="Assets/CSS/main.css">
 </head>
-<body class="flex flex-col min-h-screen">
+<body class="flex flex-col min-h-screen bg-[#F2F2F2]">
     <header class="w-full flex border-b border-black">
         <a href="index.html" class="px-14 py-5 border-r border-black flex items-center">
             <img src="Assets/Images/header/logo.svg" alt="logo">
@@ -23,6 +23,20 @@
             <img src="Assets/Images/header/rec.png" alt="rec">
         </a>
     </header>
+
+    <main class="flex items-center">
+        <div class="relative w-1/2 group">
+            <img src="Assets/Images/int/1.png" alt="int" class="w-full transition-all duration-500 absolute top-0 left-0 opacity-100 group-hover:opacity-0">
+            <img src="Assets/Images/int/2.png" alt="int" class="w-full transition-all duration-500 opacity-0 group-hover:opacity-100">
+        </div>
+        <div class="flex flex-col gap-12 w-1/2 pl-[70px]">
+            <div class="flex flex-col gap-5">
+                <p class="text-[32px] leading-[119%] Reblinking uppercase">студия, где эмоции обретают звук</p>
+                <p class="text-[28px] leading-[100%]">здесь чувства становятся мелодиями, а внутренний голос — песней</p>
+            </div>
+            <a href="" class="uppercase text-[28px] leading-[100%] text-[#6D00C2] Reblinking px-10 py-5 border-2 border-black w-fit">о нас</a>
+        </div>
+    </main>
 
     <footer class="w-full border-t border-black flex flex-col gap-3 text-[#444444] mt-auto py-5 px-10">
         <div class="flex items-center justify-between gap-12">
