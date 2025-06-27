@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Запись</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+    <link rel="stylesheet" href="../Assets/CSS/main.css">
+</head>
+<body class="flex flex-col min-h-screen bg-[#F2F2F2]">
+    <header class="w-full flex border-b-2 border-black">
+        <a href="index.html" class="px-14 py-5 border-r border-black flex items-center">
+            <img src="../Assets/Images/header/logo.svg" alt="logo">
+        </a>
+        <div class="px-5 flex flex-col justify-center text-xl leading-[100%] border-x border-black">
+            <p>загрузка...</p>
+            <p>настраиваем микрофон</p>
+        </div>
+        <div class="relative grow border-x border-black flex items-center justify-center">
+            <button id="toggler" class="px-24 py-5 w-full h-full text-[42px] leading-[100%] grow Reblinking cursor-pointer">
+                <span>МЕНЮ</span>
+            </button>
+            <div id="menu" class="-translate-y-[500px] transition-all duration-500 flex flex-col border-2 border-black bg-[#F2F2F2] text-[28px] leading-[100%] Reblinking absolute top-full left-1/2 -translate-x-1/2 w-[calc(100%+5px)] z-[3]">
+                <a href="about.html" class="flex items-center justify-between px-7 py-3 group border-b-2 border-black">
+                    <span>о нас</span>
+                    <div class="relative">
+                        <img src="../Assets/Images/header/star1.png" alt="star1" class="transition-all duration-500 opacity-100 group-hover:opacity-0">
+                        <img src="../Assets/Images/header/star2.png" alt="star2" class="absolute top-0 left-0 transition-all duration-500 opacity-0 group-hover:opacity-100">
+                    </div>
+                </a>
+                <a href="poster.html" class="flex items-center justify-between px-7 py-3 group border-b-2 border-black">
+                    <span>афиша</span>
+                    <div class="relative">
+                        <img src="../Assets/Images/header/star1.png" alt="star1" class="transition-all duration-500 opacity-100 group-hover:opacity-0">
+                        <img src="../Assets/Images/header/star2.png" alt="star2" class="absolute top-0 left-0 transition-all duration-500 opacity-0 group-hover:opacity-100">
+                    </div>
+                </a>
+                <a href="shop.html" class="flex items-center justify-between px-7 py-3 group border-b-2 border-black">
+                    <span>магазин</span>
+                    <div class="relative">
+                        <img src="../Assets/Images/header/star1.png" alt="star1" class="transition-all duration-500 opacity-100 group-hover:opacity-0">
+                        <img src="../Assets/Images/header/star2.png" alt="star2" class="absolute top-0 left-0 transition-all duration-500 opacity-0 group-hover:opacity-100">
+                    </div>
+                </a>
+                <a href="season.html" class="flex items-center justify-between px-7 py-3 group">
+                    <span>сезон</span>
+                    <div class="relative">
+                        <img src="../Assets/Images/header/star1.png" alt="star1" class="transition-all duration-500 opacity-100 group-hover:opacity-0">
+                        <img src="../Assets/Images/header/star2.png" alt="star2" class="absolute top-0 left-0 transition-all duration-500 opacity-0 group-hover:opacity-100">
+                    </div>
+                </a>
+            </div>
+        </div>
+        <div class="p-5 flex items-center border-x border-black">
+            <img src="../Assets/Images/header/moon.png" alt="moon">
+        </div>
+        <a href="rec.html" class="px-24 py-5 border-l border-black">
+            <img src="../Assets/Images/header/rec.png" alt="rec">
+        </a>
+    </header>
+
+    <main class="flex flex-col w-full">
+        <div class="flex items-center justify-between w-full pl-12 border-b-2 border-black">
+            <div class="flex flex-col text-[80px] leading-[130%] uppercase Reblinking">
+                <p>запись</p>
+                <p class="pl-[230px]">на сессию</p>
+            </div>
+            <img src="../Assets/Images/rec/hero.png" alt="hreo" class="w-fit">
+        </div>
+        <div class="flex items-center justify-between px-[140px] py-[70px] w-full gap-[137px]">
+            <div class="flex flex-col gap-6 w-[642px]">
+                <input type="text" placeholder="имя и фамилия" class="w-full border-2 border-black px-6 h-[68px] text-[24px] leading-[120%] placeholder:text-[#9A9A9A]">
+                <input type="text" placeholder="телефон для связи" class="w-full border-2 border-black px-6 h-[68px] text-[24px] leading-[120%] placeholder:text-[#9A9A9A]">
+                <select  class="w-full border-2 border-black px-6 h-[68px] text-[24px] leading-[120%] placeholder:text-[#9A9A9A]">
+                    <option value="База">База</option>
+                    <option value="Саунд-дизаин">Саунд-дизаин</option>
+                    <option value="Озвучка">Озвучка</option>
+                    <option value="Дубляж">Дубляж</option>
+                    <option value="Обучение">Обучение</option>
+                </select>
+                <button class="uppercase text-[28px] leading-[100%] text-[#6D00C2] Reblinking px-10 py-5 border-2 border-black w-fit cursor-pointer">записаться</button>
+            </div>
+            <div class="flex flex-col gap-14">
+                <p class="text-[28px] leading-[100%]">заполните форму и мы свяжемся с вами в течение <br> 30 минут</p>
+                <div class="flex items-end gap-7">
+                    <div class="flex flex-col">
+                        <p class="text-[28px] leading-[100%]">быстрые ответы <br> можно найти тут</p>  
+                        <img src="../Assets/Images/about/arrow.png" alt="arrow" class="w-fit">
+                    </div>
+                    <img src="../Assets/Images/rec/mascot.png" alt="maccot" class="w-fit">
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="w-full border-t-2 border-black flex items-center mt-auto">
+        <div class="grid grid-cols-2 grid-rows-2 w-full">
+            <div class="flex flex-col bg-[#F2F2F2] border-r-2 border-black text-[28px] leading-[100%] Reblinking w-full col-span-1 row-span-2">
+                <a href="about.html" class="flex items-center justify-between px-7 py-3 group border-b-2 border-black">
+                    <span>о нас</span>
+                    <div class="relative">
+                        <img src="../Assets/Images/header/star1.png" alt="star1" class="transition-all duration-500 opacity-100 group-hover:opacity-0">
+                        <img src="../Assets/Images/header/star2.png" alt="star2" class="absolute top-0 left-0 transition-all duration-500 opacity-0 group-hover:opacity-100">
+                    </div>
+                </a>
+                <a href="poster.html" class="flex items-center justify-between px-7 py-3 group border-b-2 border-black">
+                    <span>афиша</span>
+                    <div class="relative">
+                        <img src="../Assets/Images/header/star1.png" alt="star1" class="transition-all duration-500 opacity-100 group-hover:opacity-0">
+                        <img src="../Assets/Images/header/star2.png" alt="star2" class="absolute top-0 left-0 transition-all duration-500 opacity-0 group-hover:opacity-100">
+                    </div>
+                </a>
+                <a href="shop.html" class="flex items-center justify-between px-7 py-3 group border-b-2 border-black">
+                    <span>магазин</span>
+                    <div class="relative">
+                        <img src="../Assets/Images/header/star1.png" alt="star1" class="transition-all duration-500 opacity-100 group-hover:opacity-0">
+                        <img src="../Assets/Images/header/star2.png" alt="star2" class="absolute top-0 left-0 transition-all duration-500 opacity-0 group-hover:opacity-100">
+                    </div>
+                </a>
+                <a href="season.html" class="flex items-center justify-between px-7 py-3 group">
+                    <span>сезон</span>
+                    <div class="relative">
+                        <img src="../Assets/Images/header/star1.png" alt="star1" class="transition-all duration-500 opacity-100 group-hover:opacity-0">
+                        <img src="../Assets/Images/header/star2.png" alt="star2" class="absolute top-0 left-0 transition-all duration-500 opacity-0 group-hover:opacity-100">
+                    </div>
+                </a>
+            </div>
+            <div class="flex flex-col px-5 py-3 col-span-1 row-span-1 justify-between border-b border-black">
+                <p class="text-[28px] leading-[100%]">твой звук начинается здесь</p>
+                <img src="../Assets/Images/header/rec.png" alt="rec" class="-mt-4 w-[223px] ml-auto">
+            </div>
+            <div class="flex px-5 py-3 col-span-1 row-span-1 items-end justify-between border-t border-black">
+                <div class="flex flex-col gap-2">
+                    <img src="../Assets/Images/header/logo.svg" alt="logo" class="w-[223px]">
+                    <p class="text-xs leading-[100%] Reblinking uppercase">record your feelings</p>
+                </div>
+                <div class="flex flex-col gap-2 text-[28px] leading-[100%]">
+                    <a href="tel:+79996668169">+7 999 666 81 69</a>
+                    <a href="mailto:ryf@edu.hse.ru">ryf@edu.hse.ru</a>
+                </div>
+            </div>
+        </div>
+
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script src="../Assets/JS/main.js"></script>
+</body>
+</html>
