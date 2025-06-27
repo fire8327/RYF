@@ -2,14 +2,14 @@
 
 @font-face {
     font-family: 'MabryPro';
-    src: url('../../../Assets/Fonts/MabryPro-Regular.ttf') format('truetype');
+    src: url('../Fonts/MabryPro-Regular.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'Reblinking';
-    src: url('../../../Assets/Fonts/reblinking.ttf') format('truetype');
+    src: url('../Fonts/reblinking.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
 }
