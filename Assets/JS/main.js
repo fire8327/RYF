@@ -71,4 +71,19 @@ $(function() {
         }
       });
     });
-  });
+});
+
+/* слайдер */
+const swiper = new Swiper('.studioSwiper', {
+    slidesPerView: 1,
+    spaceBetween: 0,
+    autoplay: {
+        delay: 2500,
+        disableOnInteraction: false,
+    },
+    scrollbar: {
+        el: '.swiper-scrollbar',
+        draggable: true,
+    },
+    mousewheel: true
+});

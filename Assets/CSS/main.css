@@ -222,6 +222,12 @@
   .mt-auto {
     margin-top: auto;
   }
+  .ml-auto {
+    margin-left: auto;
+  }
+  .\!flex {
+    display: flex !important;
+  }
   .flex {
     display: flex;
   }
@@ -231,8 +237,17 @@
   .table {
     display: table;
   }
+  .\!h-\[835px\] {
+    height: 835px !important;
+  }
+  .h-\[100px\] {
+    height: 100px;
+  }
   .h-\[490px\] {
     height: 490px;
+  }
+  .h-\[835px\] {
+    height: 835px;
   }
   .h-fit {
     height: fit-content;
@@ -496,11 +511,17 @@
   .px-24 {
     padding-inline: calc(var(--spacing) * 24);
   }
+  .px-32 {
+    padding-inline: calc(var(--spacing) * 32);
+  }
   .py-3 {
     padding-block: calc(var(--spacing) * 3);
   }
   .py-5 {
     padding-block: calc(var(--spacing) * 5);
+  }
+  .py-12 {
+    padding-block: calc(var(--spacing) * 12);
   }
   .py-16 {
     padding-block: calc(var(--spacing) * 16);
