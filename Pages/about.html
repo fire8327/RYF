@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>О нас</title>
+    <link rel="stylesheet" href="../Assets/CSS/main.css">
+</head>
+<body class="flex flex-col min-h-screen bg-[#F2F2F2]">
+    <header class="w-full flex border-b-2 border-black">
+        <a href="index.html" class="px-14 py-5 border-r border-black flex items-center">
+            <img src="../Assets/Images/header/logo.svg" alt="logo">
+        </a>
+        <div class="px-5 flex flex-col justify-center text-xl leading-[100%] border-x border-black">
+            <p>загрузка...</p>
+            <p>настраиваем микрофон</p>
+        </div>
+        <div class="relative grow border-x border-black flex items-center justify-center">
+            <button id="toggler" class="px-24 py-5 w-full h-full text-[42px] leading-[100%] grow Reblinking cursor-pointer">
+                <span>МЕНЮ</span>
+            </button>
+            <div id="menu" class="-translate-y-[500px] transition-all duration-500 flex flex-col border-2 border-black bg-[#F2F2F2] text-[28px] leading-[100%] Reblinking absolute top-full left-1/2 -translate-x-1/2 w-[calc(100%+5px)] z-[3]">
+                <a href="about.html" class="flex items-center justify-between px-7 py-3 group border-b-2 border-black">
+                    <span>о нас</span>
+                    <div class="relative">
+                        <img src="../Assets/Images/header/star1.png" alt="star1" class="transition-all duration-500 opacity-100 group-hover:opacity-0">
+                        <img src="../Assets/Images/header/star2.png" alt="star2" class="absolute top-0 left-0 transition-all duration-500 opacity-0 group-hover:opacity-100">
+                    </div>
+                </a>
+                <a href="poster.html" class="flex items-center justify-between px-7 py-3 group border-b-2 border-black">
+                    <span>афиша</span>
+                    <div class="relative">
+                        <img src="../Assets/Images/header/star1.png" alt="star1" class="transition-all duration-500 opacity-100 group-hover:opacity-0">
+                        <img src="../Assets/Images/header/star2.png" alt="star2" class="absolute top-0 left-0 transition-all duration-500 opacity-0 group-hover:opacity-100">
+                    </div>
+                </a>
+                <a href="shop.html" class="flex items-center justify-between px-7 py-3 group border-b-2 border-black">
+                    <span>магазин</span>
+                    <div class="relative">
+                        <img src="../Assets/Images/header/star1.png" alt="star1" class="transition-all duration-500 opacity-100 group-hover:opacity-0">
+                        <img src="../Assets/Images/header/star2.png" alt="star2" class="absolute top-0 left-0 transition-all duration-500 opacity-0 group-hover:opacity-100">
+                    </div>
+                </a>
+                <a href="season.html" class="flex items-center justify-between px-7 py-3 group">
+                    <span>сезон</span>
+                    <div class="relative">
+                        <img src="../Assets/Images/header/star1.png" alt="star1" class="transition-all duration-500 opacity-100 group-hover:opacity-0">
+                        <img src="../Assets/Images/header/star2.png" alt="star2" class="absolute top-0 left-0 transition-all duration-500 opacity-0 group-hover:opacity-100">
+                    </div>
+                </a>
+            </div>
+        </div>
+        <div class="p-5 flex items-center border-x border-black">
+            <img src="../Assets/Images/header/moon.png" alt="moon">
+        </div>
+        <a href="" class="px-24 py-5 border-l border-black">
+            <img src="../Assets/Images/header/rec.png" alt="rec">
+        </a>
+    </header>
+
+    <main class="flex flex-col w-full">
+        <img src="../Assets/Images/about/hero.png" alt="hero" class="w-full object-cover border-b border-black">
+        <div class="flex items-center border-y border-black">
+            <div class="flex flex-col gap-40 w-[30%] border-r-2 border-black">
+                <div class="flex flex-col gap-3 p-7">
+                    <p class="text-[42px] leading-[100%] Reblinking uppercase">УСЛУГИ</p>
+                    <p class="text-[28px] leading-[120%]">потяни фейдер, чтобы узнать категории</p>
+                </div>
+                <img src="../Assets/Images/about/pixels.png" alt="pixels" class="w-full">
+            </div>
+            <div class="flex items-center relative w-[70%]">
+                <div id="base1" class="grow flex flex-col gap-[70px] p-7 transition-all duration-500 opacity-0">
+                    <div class="flex flex-col gap-3">
+                        <p class="text-[42px] leading-[100%] Reblinking uppercase">база</p>
+                        <div class="flex items-center gap-2.5 mx-auto">
+                            <img src="../Assets/Images/header/star2.png" alt="star2">
+                            <p class="text-[28px] leading-[112%]">запись вокала <br> для сольных исполнителей, групп, ансамблей</p>
+                        </div>
+                    </div>
+                    <div class="flex flex-col gap-8">
+                        <div class="flex items-center gap-4">
+                            <img src="../Assets/Images/about/list.png" alt="list" class="w-fit">
+                            <div class="flex flex-col text-[28px] leading-[100%]">
+                                <p class="font-bold">запись музыкальных инструментов</p>
+                                <p>бас, ударные, клавишные, духовые + возможна работа по запросу</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center gap-4">
+                            <img src="../Assets/Images/about/list.png" alt="list" class="w-fit">
+                            <div class="flex flex-col text-[28px] leading-[100%]">
+                                <p class="font-bold">сведение</p>
+                                <p>обработка записи</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center gap-4">
+                            <img src="../Assets/Images/about/list.png" alt="list" class="w-fit">
+                            <div class="flex flex-col text-[28px] leading-[100%]">
+                                <p class="font-bold">мастеринг</p>
+                                <p>финальная обработка трека. поможем с любыми сложностями</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="absolute flex items-center px-16">
+                    <div class="relative">
+                        <img id="track1" src="../Assets/Images/about/track1.png" alt="track" class="w-full">
+                        <img id="toggler1" src="../Assets/Images/about/toggler1.png" alt="toggler" class="absolute top-1/2 -translate-y-1/2 left-16 w-fit">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="grid grid-cols-3 border-y border-black">
+            <div class="relative">
+                <div id="base2" class="flex flex-col gap-10 p-8 border-r border-black">
+                    <p class="text-[38px] leading-[120%] Reblinking uppercase">саунд-дизаин</p>
+                    <div class="flex flex-col gap-6">
+                        <div class="flex items-center gap-4">
+                            <img src="../Assets/Images/about/list.png" alt="list" class="w-fit">
+                            <p class="text-[28px] leading-[100%]">подбор звуковых эффектов для видео, игр, рекламы, презентаций</p>
+                        </div>
+                        <div class="flex items-center gap-4">
+                            <img src="../Assets/Images/about/list.png" alt="list" class="w-fit">
+                            <p class="text-[28px] leading-[100%]">создание уникальных битов и минусовых фонограмм</p>
+                        </div>
+                        <div class="flex items-center gap-4">
+                            <img src="../Assets/Images/about/list.png" alt="list" class="w-fit">
+                            <p class="text-[28px] leading-[100%]">индивидуальная работа под заказ</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="absolute flex items-center px-16">
+                    <div class="relative">
+                        <img id="track2" src="../Assets/Images/about/track2.png" alt="track" class="h-full">
+                        <img id="toggler2" src="../Assets/Images/about/toggler2.png" alt="toggler" class="absolute top-16 -translate-x-1/2 left-1/2 w-fit">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="w-full border-t-2 border-black flex flex-col gap-3 text-[#444444] mt-auto py-5 px-10">
+        <div class="flex items-center justify-between gap-12">
+            <p class="text-[74px] leading-[100%] min-w-[313px]">автор</p>
+            <div class="relative grow group">
+                <p class="uppercase text-[#6D00C2] text-[38px] leading-[100%] Reblinking transition-all duration-500 opacity-0 group-hover:opacity-100">MPannk</p>
+                <img src="../Assets/Images/footer/1.png" alt="bg" class="absolute top-1/2 -translate-y-1/2 left-0 w-full transition-all duration-500 opacity-100 group-hover:opacity-0">
+            </div>
+        </div>
+        <div class="flex items-center justify-between gap-12">
+            <p class="text-[74px] leading-[100%] min-w-[313px]">группа</p>
+            <div class="relative grow group">
+                <p class="uppercase text-[#6D00C2] text-[38px] leading-[100%] Reblinking transition-all duration-500 opacity-0 group-hover:opacity-100">Б<span class="text-[#BF0C00]">24</span>УВКИ<span class="text-[#BF0C00]">05</span></p>
+                <img src="../Assets/Images/footer/2.png" alt="bg" class="absolute top-1/2 -translate-y-1/2 left-0 w-full transition-all duration-500 opacity-100 group-hover:opacity-0">
+            </div>
+        </div>
+        <div class="flex items-center justify-between gap-12">
+            <p class="text-[74px] leading-[100%] min-w-[313px]">кураторы</p>
+            <div class="relative grow group">
+                <p class="uppercase text-[#6D00C2] text-[38px] leading-[100%] Reblinking transition-all duration-500 opacity-0 group-hover:opacity-100">камила рихтер, анна комкова</p>
+                <img src="../Assets/Images/footer/3.png" alt="bg" class="absolute top-1/2 -translate-y-1/2 left-0 w-full transition-all duration-500 opacity-100 group-hover:opacity-0">
+            </div>
+        </div>
+        <div class="flex items-center justify-between gap-12">
+            <p class="text-[74px] leading-[100%] min-w-[313px]">модуль</p>
+            <div class="relative grow group">
+                <p class="uppercase text-[#6D00C2] text-[38px] leading-[100%] Reblinking transition-all duration-500 opacity-0 group-hover:opacity-100">четвертый</p>
+                <img src="../Assets/Images/footer/4.png" alt="bg" class="absolute top-1/2 -translate-y-1/2 left-0 w-full transition-all duration-500 opacity-100 group-hover:opacity-0">
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script src="../Assets/JS/main.js"></script>
+</body>
+</html>
