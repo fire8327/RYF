@@ -183,6 +183,15 @@
   .top-16 {
     top: calc(var(--spacing) * 16);
   }
+  .top-32 {
+    top: calc(var(--spacing) * 32);
+  }
+  .top-48 {
+    top: calc(var(--spacing) * 48);
+  }
+  .top-64 {
+    top: calc(var(--spacing) * 64);
+  }
   .top-full {
     top: 100%;
   }
@@ -221,6 +230,9 @@
   }
   .table {
     display: table;
+  }
+  .h-\[490px\] {
+    height: 490px;
   }
   .h-fit {
     height: fit-content;
@@ -288,6 +300,26 @@
   }
   .-translate-x-1\/2 {
     --tw-translate-x: calc(calc(1/2 * 100%) * -1);
+    translate: var(--tw-translate-x) var(--tw-translate-y);
+  }
+  .-translate-x-\[calc\(50\%\+4px\)\] {
+    --tw-translate-x: calc(calc(50% + 4px) * -1);
+    translate: var(--tw-translate-x) var(--tw-translate-y);
+  }
+  .-translate-x-\[calc\(50\%\+5px\)\] {
+    --tw-translate-x: calc(calc(50% + 5px) * -1);
+    translate: var(--tw-translate-x) var(--tw-translate-y);
+  }
+  .-translate-x-\[calc\(50\%\+6px\)\] {
+    --tw-translate-x: calc(calc(50% + 6px) * -1);
+    translate: var(--tw-translate-x) var(--tw-translate-y);
+  }
+  .-translate-x-\[calc\(50\%\+16px\)\] {
+    --tw-translate-x: calc(calc(50% + 16px) * -1);
+    translate: var(--tw-translate-x) var(--tw-translate-y);
+  }
+  .-translate-x-\[calc\(50\)\] {
+    --tw-translate-x: calc(calc(50) * -1);
     translate: var(--tw-translate-x) var(--tw-translate-y);
   }
   .-translate-y-1 {

@@ -6,49 +6,69 @@ $("#toggler").click(function() {
 
 /* треки */
 $(function() {
-    let dragging = false;
-    let $toggler = $('#toggler1');
-    let $track = $('#track1');
-    let $base = $('#base1');
+    // Массив слайдеров: id блока, трека, трекера, направление ('horizontal' или 'vertical')
+    const sliders = [
+      { base: '#base1',   track: '#track1', toggler: '#toggler1', direction: 'horizontal' },
+      { base: '#base2',  track: '#track2', toggler: '#toggler2', direction: 'vertical'   },
+      { base: '#base3',  track: '#track3', toggler: '#toggler3', direction: 'vertical'   },
+      { base: '#base4',  track: '#track4', toggler: '#toggler4', direction: 'vertical'   }
+    ];
   
-    // Получаем размеры и позиции
-    let trackOffset, trackWidth, togglerWidth;
+    sliders.forEach(slider => {
+      let dragging = false;
+      let trackOffset, trackSize, togglerSize;
   
-    function updateSizes() {
-      trackOffset = $track.offset().left;
-      trackWidth = $track.width();
-      togglerWidth = $toggler.width();
-    }
-  
-    $toggler.on('mousedown touchstart', function(e) {
-      dragging = true;
-      updateSizes();
-      $track.css('opacity', 0); // Скрываем трек
-      e.preventDefault();
-    });
-  
-    $(document).on('mousemove touchmove', function(e) {
-      if (dragging) {
-        let pageX = e.pageX || (e.originalEvent.touches && e.originalEvent.touches[0].pageX);
-        let x = pageX - trackOffset - togglerWidth / 2;
-        x = Math.max(0, Math.min(x, trackWidth - togglerWidth));
-        $toggler.css('left', x + 'px');
-        // Прозрачность текста зависит от положения ползунка
-        let percent = x / (trackWidth - togglerWidth);
-        $base.css('opacity', percent);
-
-        // Скрываем трекер, если текст полностью показан
-        if (percent >= 0.99) {
-          $toggler.css({'opacity': 0, 'pointer-events': 'none'});
+      function updateSizes() {
+        const $track = $(slider.track);
+        const $toggler = $(slider.toggler);
+        if (slider.direction === 'horizontal') {
+          trackOffset = $track.offset().left;
+          trackSize = $track.width();
+          togglerSize = $toggler.width();
+        } else {
+          trackOffset = $track.offset().top;
+          trackSize = $track.height();
+          togglerSize = $toggler.height();
         }
       }
-    });
   
-    $(document).on('mouseup touchend', function() {
-      if (dragging) {
-        dragging = false;
-        // Если хотите вернуть трек после отпускания ползунка, раскомментируйте строку ниже:
-        // $track.css('opacity', 1);
-      }
+      $(slider.toggler).on('mousedown touchstart', function(e) {
+        dragging = true;
+        updateSizes();
+        $(slider.track).css('opacity', 0); // Скрываем трек
+        e.preventDefault();
+      });
+  
+      $(document).on('mousemove.'+slider.toggler+' touchmove.'+slider.toggler, function(e) {
+        if (dragging) {
+          let pageCoord;
+          if (slider.direction === 'horizontal') {
+            pageCoord = e.pageX || (e.originalEvent.touches && e.originalEvent.touches[0].pageX);
+          } else {
+            pageCoord = e.pageY || (e.originalEvent.touches && e.originalEvent.touches[0].pageY);
+          }
+          let pos = pageCoord - trackOffset - togglerSize / 2;
+          pos = Math.max(0, Math.min(pos, trackSize - togglerSize));
+          if (slider.direction === 'horizontal') {
+            $(slider.toggler).css('left', pos + 'px');
+          } else {
+            $(slider.toggler).css('top', pos + 'px');
+          }
+          // Прозрачность текста зависит от положения ползунка
+          let percent = pos / (trackSize - togglerSize);
+          $(slider.base).css('opacity', percent);
+  
+          // Скрываем трекер, если текст полностью показан
+          if (percent >= 0.99) {
+            $(slider.toggler).css({'opacity': 0, 'pointer-events': 'none'});
+          }
+        }
+      });
+  
+      $(document).on('mouseup.'+slider.toggler+' touchend.'+slider.toggler, function() {
+        if (dragging) {
+          dragging = false;
+        }
+      });
     });
   });
