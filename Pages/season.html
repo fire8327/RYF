@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Магазин</title>
+    <title>Сезон</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
     <link rel="stylesheet" href="../Assets/CSS/main.css">
 </head>
@@ -60,52 +60,61 @@
     </header>
 
     <main class="flex flex-col w-full">
-        <div class="w-full border-b-2 border-black">
-            <img src="../Assets/Images/shop/hero.png" alt="hreo" class="w-full h-full object-cover">
+        <div class="w-full">
+            <img src="../Assets/Images/season/hero.png" alt="hreo" class="w-full h-full object-cover">
         </div>
-        <div class="flex items-center border-b-2 border-black">
-            <img src="../Assets/Images/shop/product1.png" alt="product" class="w-[35%] border-r-2 border-black">
-            <div class="flex items-center justify-between w-[65%] pl-[130px]">
-                <div class="flex flex-col gap-10">
-                    <p class="text-[32px] leading-[120%] font-medium">шапка «Не обращайте внимание»</p>
-                    <p class="text-[32px] leading-[120%]">2699 руб.</p>
-                    <button class="uppercase text-[28px] leading-[100%] text-[#6D00C2] Reblinking px-10 py-5 border-2 border-black w-fit cursor-pointer">купить</button>
+        <div class="flex items-center gap-14 relative px-16 pt-16 pb-44">
+            <button class="cursor-pointer season-back shrink-0">
+                <img src="../Assets/Images/season/left.png" alt="left" class="w-fit">
+            </button> 
+            <div class="swiper seasonSwiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide w-full !flex flex-col gap-7">
+                        <div class="flex items-start gap-16 justify-between">
+                            <div class="flex flex-col gap-3 text-[28px] leading-[120%]">
+                                <p class="font-medium">«Выбери свою эмоцию»</p>
+                                <div class="flex flex-col gap-6">
+                                    <p>Креативный проект. созданный в коллаборции с <span class="text-[#6D00C2]">Lvozen.</span></p>
+                                    <p>Веб-плакат представляет чувства как контролиремый хаос.</p>
+                                    <p>Интересный факт: Ребрендинг нашей студии был вдохновлен именно этим проектом!</p>
+                                </div>
+                            </div>
+                            <img src="../Assets/Images/season/poster1.png" alt="poster" class="w-fit">
+                        </div>
+                        <button class="self-end uppercase text-[28px] leading-[100%] text-[#6D00C2] Reblinking px-10 py-5 border-2 border-black w-fit cursor-pointer">перейти</button>
+                    </div>
+                    <div class="swiper-slide w-full !flex flex-col gap-7">
+                        <div class="flex items-start gap-16 justify-between">
+                            <div class="flex flex-col gap-3 text-[28px] leading-[120%]">
+                                <p class="font-medium">«Запиши свои эмоции»</p>
+                                <div class="flex flex-col gap-6">
+                                    <p>Креативный проект. созданный в коллаборции с <span class="text-[#6D00C2]">JustJamie.</span></p>
+                                    <p>Веб-плакат визуализирует лучшие чувственные треки, выпущенные в нашей студии.</p>
+                                </div>
+                            </div>
+                            <img src="../Assets/Images/season/poster2.png" alt="poster" class="w-fit">
+                        </div>
+                        <button class="self-end uppercase text-[28px] leading-[100%] text-[#6D00C2] Reblinking px-10 py-5 border-2 border-black w-fit cursor-pointer">перейти</button>
+                    </div>
+                    <div class="swiper-slide w-full !flex flex-col gap-7">
+                        <div class="flex items-start gap-16 justify-between">
+                            <div class="flex flex-col gap-3 text-[28px] leading-[120%]">
+                                <p class="font-medium">«Летняя бомба 2024»</p>
+                                <div class="flex flex-col gap-6">
+                                    <p>Камерный концерт, организованный совместно с лейблом <span class="text-[#6D00C2]">HouseTeam.</span></p>
+                                    <p>На нем были представлены хиты прошлого лета, записанные в нашей студии.</p>
+                                </div>
+                            </div>
+                            <img src="../Assets/Images/season/poster3.png" alt="poster" class="w-fit">
+                        </div>
+                        <button class="self-end uppercase text-[28px] leading-[100%] text-[#6D00C2] Reblinking px-10 py-5 border-2 border-black w-fit cursor-pointer">перейти</button>
+                    </div>
                 </div>
-                <img src="../Assets/Images/shop/bg1.png" alt="bg" class="h-full object-cover">
             </div>
-        </div>
-        <div class="flex items-center border-b-2 border-black">
-            <div class="flex items-center justify-between w-[65%] pr-[130px]">
-                <img src="../Assets/Images/shop/bg2.png" alt="bg" class="h-full object-cover">
-                <div class="flex flex-col gap-10 text-right items-end">
-                    <p class="text-[32px] leading-[120%] font-medium">виниловые наклейки «Стоп-сигналы»</p>
-                    <p class="text-[32px] leading-[120%]">699 руб.</p>
-                    <button class="uppercase text-[28px] leading-[100%] text-[#6D00C2] Reblinking px-10 py-5 border-2 border-black w-fit cursor-pointer">купить</button>
-                </div>
-            </div>
-            <img src="../Assets/Images/shop/product2.png" alt="product" class="w-[35%] border-l-2 border-black">
-        </div>
-        <div class="flex items-center border-b-2 border-black">
-            <img src="../Assets/Images/shop/product3.png" alt="product" class="w-[35%] border-r-2 border-black">
-            <div class="flex items-center justify-between w-[65%] pl-[130px]">
-                <div class="flex flex-col gap-10">
-                    <p class="text-[32px] leading-[120%] font-medium">футболка «Настроение»</p>
-                    <p class="text-[32px] leading-[120%]">3699 руб.</p>
-                    <button class="uppercase text-[28px] leading-[100%] text-[#6D00C2] Reblinking px-10 py-5 border-2 border-black w-fit cursor-pointer">купить</button>
-                </div>
-                <img src="../Assets/Images/shop/bg3.png" alt="bg" class="h-full object-cover">
-            </div>
-        </div>
-        <div class="flex items-center">
-            <div class="flex items-center justify-between w-[65%] pr-[130px]">
-                <img src="../Assets/Images/shop/bg4.png" alt="bg" class="h-full object-cover">
-                <div class="flex flex-col gap-10 text-right items-end">
-                    <p class="text-[32px] leading-[120%] font-medium">наушники «8D» </p>
-                    <p class="text-[32px] leading-[120%]">4699 руб.</p>
-                    <button class="uppercase text-[28px] leading-[100%] text-[#6D00C2] Reblinking px-10 py-5 border-2 border-black w-fit cursor-pointer">купить</button>
-                </div>
-            </div>
-            <img src="../Assets/Images/shop/product4.png" alt="product" class="w-[35%] border-l-2 border-black">
+            <button class="cursor-pointer season-next shrink-0">
+                <img src="../Assets/Images/season/left.png" alt="left" class="w-fit scale-x-[-1]">
+            </button>
+            <img src="../Assets/Images/season/bg.png" alt="bg" class="absolute bottom-0 left-24">
         </div>
     </main>
 

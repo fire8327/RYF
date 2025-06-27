@@ -73,7 +73,7 @@ $(function() {
     });
 });
 
-/* слайдер */
+/* слайдеры */
 const swiper = new Swiper('.studioSwiper', {
     slidesPerView: 1,
     spaceBetween: 0,
@@ -86,4 +86,14 @@ const swiper = new Swiper('.studioSwiper', {
         draggable: true,
     },
     mousewheel: true
+});
+
+const seasonSwiper = new Swiper('.seasonSwiper', {
+    slidesPerView: 1,
+    spaceBetween: 0,
+    navigation: {
+        nextEl: '.season-next',
+        prevEl: '.season-back',
+    },
+    loop: true
 });
